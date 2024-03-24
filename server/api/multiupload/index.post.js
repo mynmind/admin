@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
         file.mimetype === "image/webp"
       ) {
         // Если файл изображение, используем путь для изображений
-        uploadPath = config.FILES_PATH;
+        uploadPath = config.FILES_PATH_URL;
       } else if (file.mimetype === "video/mp4") {
         // Если файл видео, используем путь для видео
         uploadPath = config.FILES_PATH_VIDEO;
