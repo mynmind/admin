@@ -129,7 +129,7 @@ export default defineNuxtConfig({
     plugins: ["~/server/index.ts"],
     devProxy: {
       "/images": {
-        target: "https://cloud.weboko.net/assets/images/",
+        target: "https://cloud.weboko.net/images/",
         changeOrigin: true,
       },
     },
