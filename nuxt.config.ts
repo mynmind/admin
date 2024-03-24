@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     public: {
       filesPath: process.env.FILES_PATH_URL,
       filesPathVideo: process.env.FILES_PATH_VIDEO_URL,
+      urlHost: process.env.AUTH_ORIGIN,
     },
   },
   app: {

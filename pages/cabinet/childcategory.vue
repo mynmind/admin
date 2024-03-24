@@ -115,6 +115,7 @@ const drawerDel = async (id, img) => {
     refresh();
   }
 };
+
 const drawerIn = (item) => {
   form.value.img = [];
   fileUpload.value = [];
@@ -172,7 +173,9 @@ const addImg = (fileData) => {
 
 const beforeRemove = (file, fileList) => {
   form.value.img = [];
+  console.log(file);
   fileDelte.value.push(file);
+  console.log(imfArr.value);
   form.value.img = imfArr.value;
   if (file.size != undefined && fileList.length == 1) {
     fileDelte.value = [];
@@ -182,6 +185,13 @@ const handleCloseDrawer = () => {
   drawer.value = false;
   refresh();
 };
+// const getFileList = () => {
+//   const formattedFiles = imfArr.value.map((item) => ({
+//     name: item.name,
+//     url: `${config.public.urlHost}${item.url}`,
+//   }));
+//   return formattedFiles;
+// };
 </script>
 
 <template>
@@ -278,8 +288,7 @@ const handleCloseDrawer = () => {
                           drag
                           action="#"
                           multiple
-                          list-type="picture"
-                          v-model:file-list="imfArr"
+                          :file-list="imfArr"
                         >
                           <el-icon class="el-icon--upload"
                             ><upload-filled
