@@ -105,9 +105,6 @@ export default defineNuxtConfig({
       },
     ],
   ],
-  // site: {
-  //   url: "https://fastsite.pro/",
-  // },
 
   piniaPersistedstate: {
     cookieOptions: {
@@ -117,7 +114,7 @@ export default defineNuxtConfig({
   },
   image: {
     aliyun: {
-      baseURL: "http://localhost:3001/",
+      baseURL: "https://cloud.weboko.net/",
     },
   },
   auth: {
@@ -130,11 +127,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   nitro: {
     plugins: ["~/server/index.ts"],
-    // devProxy: {
-    //   "/images": {
-    //     target: "https://disk.cryptoscool.ru/images/",
-    //     changeOrigin: true,
-    //   },
-    // },
+    devProxy: {
+      "/images": {
+        target: "https://cloud.weboko.net/images/",
+        changeOrigin: true,
+      },
+    },
   },
 });
