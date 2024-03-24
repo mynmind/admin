@@ -75,8 +75,6 @@ export default defineNuxtConfig({
   modules: [
     "nuxt-server-utils",
     "@sidebase/nuxt-auth",
-    "@nuxt-modules/cache",
-    "nuxt-simple-sitemap",
     "nuxt-icon",
     "@element-plus/nuxt",
     "@nuxt/image-edge",
@@ -97,13 +95,6 @@ export default defineNuxtConfig({
         },
       },
     ],
-    [
-      "yandex-metrika-module-nuxt3",
-      {
-        id: "121212121212",
-        webvisor: true,
-      },
-    ],
   ],
 
   piniaPersistedstate: {
@@ -115,6 +106,7 @@ export default defineNuxtConfig({
   image: {
     aliyun: {
       baseURL: "https://cloud.weboko.net/",
+      //baseURL: "http://localhost:3000/",
     },
   },
   auth: {

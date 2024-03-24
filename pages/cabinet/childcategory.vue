@@ -86,6 +86,15 @@ const addUnit = async () => {
   }
 };
 const drawerDel = async (id, img) => {
+  dell.value = { _id: id };
+  const responseData = await $fetch("/api/delete/deletechildcategory/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json; charset=UTF-8",
+    },
+    body: dell.value,
+  });
+
   let arrImg = [];
   for (let item in img) {
     if (img[item].name != undefined) {
@@ -101,14 +110,7 @@ const drawerDel = async (id, img) => {
       body: { img: arrImg },
     });
   }
-  dell.value = { _id: id };
-  const responseData = await $fetch("/api/delete/deletechildcategory/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json; charset=UTF-8",
-    },
-    body: dell.value,
-  });
+
   if (responseData) {
     refresh();
   }

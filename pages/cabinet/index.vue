@@ -41,7 +41,6 @@ const {
   },
   body: { sortPage, pageSize },
 });
-console.log(users.value);
 const addUser = async () => {
   let updatecat = "api/update/updateuser";
   console.log(form.value);
@@ -178,7 +177,11 @@ const timeFun = (newValue) => {
                 <div class="drawer-cat-left">
                   <div
                     class="drawer-cat-img"
-                    v-if="item.userData[0].img.length"
+                    v-if="
+                      item.userData &&
+                      item.userData.length > 0 &&
+                      item.userData[0].img.length
+                    "
                   >
                     <img
                       v-for="imgurl in item.userData[0].img"
