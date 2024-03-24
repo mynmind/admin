@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
       if (
         file.mimetype == "image/png" ||
         file.mimetype == "image/jpeg" ||
-        fileExtension === "image/jpg" ||
+        file.mimetype === "image/jpg" ||
         file.mimetype === "image/webp"
       ) {
         // Если файл изображение, используем путь для изображений
@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
       }
 
       // Вызываем колбэк с выбранным путем загрузки
-      //cb(null, uploadPath);
+      // cb(null, uploadPath);
       cb(null, "/var/www/cloud/assets/images/");
     };
 
@@ -48,7 +48,7 @@ export default defineEventHandler(async (event) => {
         if (
           file.mimetype == "image/png" ||
           file.mimetype == "image/jpeg" ||
-          fileExtension === "image/jpg" ||
+          file.mimetype === "image/jpg" ||
           file.mimetype === "image/webp" ||
           file.mimetype === "video/mp4"
         ) {
