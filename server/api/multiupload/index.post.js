@@ -29,7 +29,7 @@ export default defineEventHandler(async (event) => {
 
       // Вызываем колбэк с выбранным путем загрузки
       //cb(null, uploadPath);
-      cb(null, "/var/www/cloud/images/");
+      cb(null, "/var/www/cloud/assets/images/");
     };
 
     const storage = multer.diskStorage({
