@@ -107,7 +107,7 @@ export default defineNuxtConfig({
   image: {
     aliyun: {
       baseURL: "https://cloud.weboko.net/",
-      //baseURL: "http://localhost:3000/",
+      //baseURL: "http://localhost:3001/",
     },
   },
   auth: {

@@ -21,12 +21,6 @@ const handleLogin = async (e) => {
     });
   }
 };
-const onInputClick = () => {
-  progress.value = 50;
-};
-const twoInputClick = () => {
-  progress.value = 100;
-};
 </script>
 <template>
   <div class="container">
@@ -35,9 +29,6 @@ const twoInputClick = () => {
 
       <div class="columns">
         <div class="column is-5">
-          <progress class="progress is-primary" :value="progress" max="100">
-            15%
-          </progress>
           <form @submit.prevent="handleLogin">
             <div class="field">
               <div class="control">
@@ -45,7 +36,6 @@ const twoInputClick = () => {
                   class="input"
                   type="text"
                   placeholder="UserName"
-                  @change="onInputClick"
                   v-model="form.username"
                 />
               </div>
@@ -56,7 +46,6 @@ const twoInputClick = () => {
                   class="input"
                   type="password"
                   placeholder="Password"
-                  @change="twoInputClick"
                   v-model="form.password"
                 />
               </div>

@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
       }
 
       // Удаляем файлы только из соответствующего пути
-      // fs.unlinkSync(`${uploadPath}${file.name}`);
+      //fs.unlinkSync(`${uploadPath}${file.name}`);
       fs.unlinkSync(`/var/www/cloud/assets/images/${file.name}`);
     });
 

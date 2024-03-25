@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
       }
 
       // Вызываем колбэк с выбранным путем загрузки
-      // cb(null, uploadPath);
+      //cb(null, uploadPath);
       cb(null, "/var/www/cloud/assets/images/");
     };
 

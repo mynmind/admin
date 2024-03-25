@@ -6,6 +6,7 @@ const lessonScema = new mongoose.Schema({
   number: { type: String, require: true, trim: true },
   lesson_number: { type: String, require: true, trim: true },
   time: { type: String, require: true, trim: true },
+  link_video: { type: String, require: true, trim: true },
   video: { type: Array, default: [] },
   description: { type: String, require: true, trim: true },
 });

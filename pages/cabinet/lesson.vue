@@ -81,6 +81,7 @@ const addUnit = async () => {
       name: "",
       number: "",
       lesson_number: "",
+      link_video: "",
       time: "",
       description: "",
       video: [],
@@ -129,6 +130,7 @@ const drawerIn = (item) => {
     (form.value.name = item.name),
     (form.value.number = item.number),
     (form.value.lesson_number = item.lesson_number),
+    (form.value.link_video = item.link_video),
     (form.value.time = item.time),
     (drawer.value = true);
   buttonEdit.value = false;
@@ -315,16 +317,16 @@ const handleCloseDrawer = () => {
                         />
                       </div>
                     </div>
-                    <!-- <div class="field">
+                    <div class="field">
                       <div class="control">
                         <input
                           class="input"
                           type="text"
-                          placeholder="type"
-                          v-model="form.type"
+                          placeholder="link video"
+                          v-model="form.link_video"
                         />
                       </div>
-                    </div> -->
+                    </div>
                     <div class="field">
                       <div class="control">
                         <button
